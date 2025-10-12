@@ -3,6 +3,8 @@ import './App.css';
 import { useState ,useEffect } from 'react';
 import FromScratch from './React_infinite_Scroll/FromScratch';
 import WithReactScroll from './React_infinite_Scroll/WithReactScroll';
+import WithReactWindow from './React_infinite_Scroll/WithReactWindow';
+import WithIntersectionObserver from './React_infinite_Scroll/WithIntersectionObserver';
 
 
 
@@ -46,17 +48,28 @@ function App() {
 
   return (
     <div className="App">
-      <FromScratch
+      {/* <FromScratch
         products={products}
         fetchData={fetchData}
         loading={loading}
         error={error}
-      />
+      /> */}
       {/* <WithReactScroll
     products={products}
     fetchData={fetchData}
     totalProduct={totalProduct}/> */}
-    
+    {/* <WithReactWindow
+    products={products}
+    fetchData={fetchData}
+    totalProduct={totalProduct}
+    loading={loading}
+  /> */}
+  <WithIntersectionObserver
+    products={products}
+    fetchData={fetchData}
+    loading={loading}
+    error={error}
+  />
     </div>
   );
 }
