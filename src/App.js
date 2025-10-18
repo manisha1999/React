@@ -8,6 +8,7 @@ import WithIntersectionObserver from './React_infinite_Scroll/WithIntersectionOb
 import { loremIpsum } from 'lorem-ipsum';
 import { List } from 'react-virtualized';
 import useFetch from './CustomHook/useFetch';
+import Modal from './Modal/Modal';
 // import Virtualised_List_Component from './Virtualised_List_Component/Virtualised_List_Component';
 
 
@@ -85,11 +86,18 @@ function App() {
 // }
 
 // Custom Hook
-const { data, error, isLoading } = useFetch('https://jsonplaceholder.typicode.com/posts')
-console.log(data)
-if (error) {
-  return <div>Error: {error.message}</div>
-}
+// const { data, error, isLoading } = useFetch('https://jsonplaceholder.typicode.com/posts')
+// console.log(data)
+// if (error) {
+//   return <div>Error: {error.message}</div>
+// }
+
+
+// Modal
+const [isModalvisible,setisModalvisible] = useState(false)
+
+
+
 
   return (
     <div className="App">
@@ -135,16 +143,24 @@ if (error) {
     {/* Custom Hook */}
 
     
-      {data && data.map(post => (
+      {/* {data && data.map(post => (
         <div className='posts'>
         <div key={post.id}>
           <h3 style={{textAlign:"center"}}>{post.title}</h3>
           <p>{post.body}</p>
         </div>
         </div>
-      ))}
+      ))} */}
     
 
+        {/* Modal */}
+        <button onClick={()=> setisModalvisible(true)}> Open Modal</button>
+
+        {isModalvisible && (
+        <Modal onClose={()=>setisModalvisible(false)}/>
+          
+        ) 
+        }
     
 
     
