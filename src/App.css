@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+
+.list {
+  padding: 10px;
+}
+
+.row {
+  border-bottom: 1px solid #ebeced;
+  text-align: left;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  margin-right: 10px;
+}
+
+.content {
+  padding: 10px;
+}
+
+
+/* customHook */
+
+.posts{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  width: auto;
+  margin: 10px;
+  height :100px;
+  gap: 10px;
+}
