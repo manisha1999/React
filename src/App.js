@@ -9,6 +9,8 @@ import { loremIpsum } from 'lorem-ipsum';
 import { List } from 'react-virtualized';
 import useFetch from './CustomHook/useFetch';
 import Modal from './Modal/Modal';
+import Form from './FormValidation/Form';
+import DynamicForm from './FormValidation/DynamicForm';
 // import Virtualised_List_Component from './Virtualised_List_Component/Virtualised_List_Component';
 
 
@@ -154,13 +156,17 @@ const [isModalvisible,setisModalvisible] = useState(false)
     
 
         {/* Modal */}
-        <button onClick={()=> setisModalvisible(true)}> Open Modal</button>
+        {/* <button className='openbutton' onClick={()=> setisModalvisible(true)}> Open Modal</button>
 
         {isModalvisible && (
         <Modal onClose={()=>setisModalvisible(false)}/>
           
         ) 
-        }
+        } */}
+
+       {/* Form Validation */}
+       {/* <Form/> */}
+       <DynamicForm/>
     
 
     
