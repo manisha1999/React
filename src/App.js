@@ -11,6 +11,8 @@ import useFetch from './CustomHook/useFetch';
 import Modal from './Modal/Modal';
 import Form from './FormValidation/Form';
 import DynamicForm from './FormValidation/DynamicForm';
+import DragAndDrop from './DragAndDrop/DragAndDrop';
+import DragAndDropTouch from './DragAndDrop/DragAndDropTouch';
 // import Virtualised_List_Component from './Virtualised_List_Component/Virtualised_List_Component';
 
 
@@ -166,7 +168,11 @@ const [isModalvisible,setisModalvisible] = useState(false)
 
        {/* Form Validation */}
        {/* <Form/> */}
-       <DynamicForm/>
+       {/* <DynamicForm/> */}
+
+
+       {/* Drag And Drop */}
+       <DragAndDropTouch/>
     
 
     

@@ -1,0 +1,36 @@
+.dnd-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 2rem auto;
+    background-color: #f0f4f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+h2 {
+    text-align: center;
+    color: #3b82f6;
+    margin-bottom: 1rem;
+}
+.item {
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    cursor: grab;
+    transition: all 0.15s ease-in-out;
+    font-weight: 500;
+    color: #1f2937;
+}
+.item:hover {
+    background-color: #f9fafb;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.dragging {
+    opacity: 0.3;
+    border: 2px dashed #3b82f6;
+    background-color: #eff6ff;
+}
