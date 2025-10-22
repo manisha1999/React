@@ -34,10 +34,9 @@ export const ToastContextProvider = ({children}) =>{
     }
 
     const remove = (id) => {
-        dispatch({type : "ADD_TOAST",payload : id})
+        dispatch({type : "DELETE_TOAST",payload : id})
     }
     const value = {
-        toasts: state.toasts,
         success,
         info,
         warning,

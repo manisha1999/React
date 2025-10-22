@@ -24,9 +24,9 @@ const ToastType = {
         progressBarClass: "info",
     },
     error : {
-        icon: <IconInfoCircleFilled />,
-        iconClass: "info-icon",
-        progressBarClass: "info",
+        icon: <IconCircleXFilled />,
+        iconClass: "error-icon",
+        progressBarClass: "error",
     },
 }
 
