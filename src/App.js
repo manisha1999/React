@@ -16,6 +16,8 @@ import DragAndDropTouch from './DragAndDrop/DragAndDropTouch';
 import RegistrationPage from './MultiStepForm/RegistrationPage';
 // import Virtualised_List_Component from './Virtualised_List_Component/Virtualised_List_Component';
 
+import { useToast } from './NotitficationToast/useToast';
+
 
 
 
@@ -101,6 +103,8 @@ function App() {
 // Modal
 const [isModalvisible,setisModalvisible] = useState(false)
 
+//Toast
+const toast = useToast();
 
 
 
@@ -176,7 +180,35 @@ const [isModalvisible,setisModalvisible] = useState(false)
        {/* <DragAndDropTouch/> */}
 
 
-       <RegistrationPage/>
+       {/* <RegistrationPage/> */}
+
+        {/* Toast page */}
+       <div className="btn-container">
+        <button
+          className="success-btn"
+          onClick={() => toast.success("Success toast notification")}
+        >
+          Success
+        </button>
+        <button
+          className="info-btn"
+          onClick={() => toast.info("Info toast notification")}
+        >
+          Info
+        </button>
+        <button
+          className="warning-btn"
+          onClick={() => toast.warning("Warning toast notification")}
+        >
+          Warning
+        </button>
+        <button
+          className="error-btn"
+          onClick={() => toast.error("Error toast notification")}
+        >
+          Error
+        </button>
+      </div>
     
 
     
